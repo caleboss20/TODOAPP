@@ -1,28 +1,12 @@
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
-import { UseTodos } from "./TodoContext";
-function AddTask() {
-
-  // Hot reload safe destructuring
-  const {
-    taskInput = { task: "", start: "", end: "", priority: "" },
-    handleInput = () => {},
-    handleClick = () => {},
-    addeditem = false,
-    addeditem: addedItem
-  } = UseTodos() || {};
-
-  const {taskInput,addeditem,handleInput,handleClick}=UseTodos();
- 
-
-
-
+function AddTask({addeditem,taskInput,handleInput,handleClick}) {
 
   return (
     <div className="p-7">
       {/* Navigation */}
       <nav>
-        <Link to="/Home">
+        <Link to="/">
           <ArrowLeftIcon className="w-7 h-7" />
         </Link>
       </nav>
@@ -66,7 +50,6 @@ function AddTask() {
         </div>
         <div className="mt-10 gap-5">
           <label className="text-xl font-medium">Priority</label>
-<<<<<<< HEAD
           <select
             name="priority"
             value={taskInput.priority}
@@ -77,23 +60,6 @@ function AddTask() {
             <option>Medium</option>
             <option>Low</option>
           </select>
-
-       
-         <select
-          name="priority" 
-          value={taskInput.priority}
-          onChange={handleInput}
-          id="" className="mt-6 w-full border-none text-xl outline-none h-15 bg-gray-100 rounded-2xl">
-            <option value="High">High</option>
-            <option value="Medium">Medium</option>
-            <option value="Low">Low</option>
-            </select>
-          {/* <input
-            type="text"
-             placeholder="Everyday"
-            className="w-full border-none text-xl pl-4 outline-none h-15 bg-gray-100 rounded-2xl"
-          /> */}
-
         </div>
       </div>
       {/* Submit Button */}
