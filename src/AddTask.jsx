@@ -4,8 +4,8 @@ import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { UseTodos } from "./TodoContext";
 function AddTask() {
-  const {taskInput,addeditem}=UseTodos();
-  const {handleInput,handleClick}=UseTodos();
+  const {taskInput,addeditem,handleInput,handleClick}=UseTodos();
+ 
 
 
 
