@@ -19,15 +19,13 @@ function TodoProvider({children}){
  const {name,value}=e.target;
  setTask(prev=>({...prev,[name]:value}));
  }
-  const handleClick=()=>{
-    setTotalItems([...totalItems,taskInput]);
-    const {task,start,end,priority}=taskInput
-    if(!task.trim() ||!start.trim()|| !end.trim() ||!priority.trim() )return;
-    setTask({task:"",start:"",end:"",priority:""});
-   
-   setAddedItem(!addeditem);
-
-  }   
+  const handleClick = () => {
+  const { task, start, end, priority } = taskInput;
+  if(!task.trim() || !start.trim() || !end.trim() || !priority.trim()) return;
+  setTotalItems([...totalItems, taskInput]);
+  setTask({ task:"", start:"", end:"", priority:"" });
+  setAddedItem(!addeditem);
+}
   const handleDelete=(i)=>{
     const newItems=[...totalItems];
     newItems.splice(i,1);
