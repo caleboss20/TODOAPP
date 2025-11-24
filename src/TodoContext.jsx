@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { createContext, useState, useContext } from "react";
 const TodoContext = createContext();
 function TodoProvider({ children }) {
@@ -27,6 +28,39 @@ function TodoProvider({ children }) {
   const handleDelete = (i) => {
     const newItems = [...totalItems];
     newItems.splice(i, 1); // same logic as your original
+=======
+import { createContext,useState,useContext } from "react";
+const TodoContext=createContext();
+
+function TodoProvider({children}){
+ const [taskInput,setTask]=useState(
+    {
+        task:"",
+        start:"",
+        end:"",
+        priority:"",
+
+
+    }
+);
+ const [totalItems,setTotalItems]=useState([]);
+ const [addeditem,setAddedItem]=useState(false);
+ 
+ const handleInput=(e)=>{
+ const {name,value}=e.target;
+ setTask(prev=>({...prev,[name]:value}));
+ }
+  const handleClick = () => {
+  const { task, start, end, priority } = taskInput;
+  if(!task.trim() || !start.trim() || !end.trim() || !priority.trim()) return;
+  setTotalItems([...totalItems, taskInput]);
+  setTask({ task:"", start:"", end:"", priority:"" });
+  setAddedItem(!addeditem);
+}
+  const handleDelete=(i)=>{
+    const newItems=[...totalItems];
+    newItems.splice(i,1);
+>>>>>>> af4a0c3f19f3127ae54cb168956ab83834902b53
     setTotalItems(newItems);
   };
   return (
@@ -46,6 +80,7 @@ function TodoProvider({ children }) {
   );
 }
 export default TodoProvider;
+<<<<<<< HEAD
 // Safe hook for hot reload
 export function UseTodos() {
   const context = useContext(TodoContext);
@@ -54,4 +89,8 @@ export function UseTodos() {
     return {};
   }
   return context;
+=======
+export function UseTodos(){
+ return useContext(TodoContext);
+>>>>>>> af4a0c3f19f3127ae54cb168956ab83834902b53
 }

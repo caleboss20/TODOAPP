@@ -61,7 +61,18 @@ function TodoList() {
                   <TrashIcon className="w-7 h-7" />
                 </div>
               </div>
+
             ))}
+
+              </div>
+              <div onClick={handleDelete(index)}><TrashIcon className="w-7 h-7"/></div>
+              
+            </div>
+            )}
+
+
+            {/**end of the item */}
+
           </div>
           {/* Add new task button */}
           <Link to="/AddTask">
