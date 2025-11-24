@@ -69,9 +69,9 @@ function AddTask() {
           value={taskInput.priority}
           onChange={handleInput}
           id="" className="mt-6 w-full border-none text-xl outline-none h-15 bg-gray-100 rounded-2xl">
-              <option>High</option>
-                <option>Medium</option>
-                  <option>Low</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
             </select>
           {/* <input
             type="text"
