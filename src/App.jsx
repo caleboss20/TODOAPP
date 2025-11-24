@@ -7,13 +7,11 @@ import AddTask from './AddTask';
 
 function App() {
  return(
-    <>
+  
     <Routes>
-        <Route path='/Home'element={<TodoList />} />
-         <Route path='/AddTask'element={<AddTask />} />
+        <Route path='/Home' element={<TodoList />} />
+         <Route path='/AddTask' element={<AddTask />} />
       </Routes>
-   
-  </>
  )
 }
 
