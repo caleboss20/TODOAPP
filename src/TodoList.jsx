@@ -57,7 +57,7 @@ function TodoList() {
                 <span className="text-gray-700">{item.priority}</span>
               </div>
               </div>
-              <div onClick={handleDelete}><TrashIcon className="w-7 h-7"/></div>
+              <div onClick={handleDelete(index)}><TrashIcon className="w-7 h-7"/></div>
               
             </div>
             )}
