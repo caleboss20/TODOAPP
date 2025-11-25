@@ -20,8 +20,13 @@ function App() {
       },[totalItems])
       
       
-    const [searchQuery,setsearchQuery]=useState('');
+  const [searchQuery,setsearchQuery]=useState('');
   const [addeditem, setAddedItem] = useState(false);
+  const [editError,setEditError]=useState('');
+  const [editIndex,setEditIndex]=useState(null);
+  const [editValue,setEditValue]=useState('');
+  
+
   const [taskInput, setTask] = useState({
     task: "",
     start: "",
@@ -41,7 +46,7 @@ function App() {
     const newTask= {...taskInput,completed:false}
       setTotalItems([...totalItems,newTask])
     
-   setTask({ task: "", start: "", end: "", priority: "" });
+     setTask({ task: "", start: "", end: "", priority: "" });
     setAddedItem(!addeditem);
   };
   // Delete task by index
@@ -64,6 +69,21 @@ function App() {
    setTotalItems(newItems);
   }
 
+//for the editing of todolist//
+  const handleEdit=(index)=>{
+    setEditIndex(index);
+    setEditValue(totalItems[index].task);
+  }
+//for saving of edited todo//
+  const handleSave=(index)=>{
+   const updated=[...totalItems];
+   updated[index].task=editValue.trim();
+   setTotalItems(updated);
+   setEditIndex(null);
+   setEditValue('');
+  }
+
+
 
 
  return(
@@ -79,6 +99,11 @@ function App() {
          searchQuery={searchQuery}
          setsearchQuery={setsearchQuery}
          toggleCompleted={toggleCompleted}
+         handleEdit={handleEdit}
+         handleSave={handleSave}
+         editValue={editValue}
+         editIndex={editIndex}
+         setEditValue={setEditValue}
          />
           
          } />
