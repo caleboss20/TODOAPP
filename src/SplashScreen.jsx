@@ -11,10 +11,10 @@ function Splashscreen() {
     },[navigate]);
     
   return (
-    <div className="w-full h-screen bg-blue-700 items-center justify-center flex">
+    <div className="w-full h-screen bg-violet-800 items-center justify-center flex">
       <div className="flex gap-3 items-center">
-        <h2 className="text-3xl font-medium text-white">Shuttle</h2>
-        <TruckIcon className="text-white w-10 h-10" />
+        <h2 className="text-5xl font-bold text-white">Shuttle</h2>
+        {/* <TruckIcon className="text-white w-10 h-10" /> */}
       </div>
     </div>
   );

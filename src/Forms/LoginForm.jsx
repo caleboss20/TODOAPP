@@ -98,7 +98,7 @@ function LoginForm() {
       {isLoading && (
         <div className="fixed inset-0 bg-black/40 bg-opacity-50 flex items-center justify-center z-50">
           <div className="flex flex-col items-center gap-4">
-            <div className="w-12 h-12 border-4 border-white border-t-blue-500 rounded-full animate-spin"></div>
+            <div className="w-12 h-12 border-4 border-white border-t-violet-500 rounded-full animate-spin"></div>
             <p className="text-white text-lg font-medium">Logging in...</p>
           </div>
         </div>
@@ -123,7 +123,7 @@ function LoginForm() {
           <div className="flex flex-col gap-3 mb-5">
             <div className="flex justify-between items-center">
               <label className="text-black text-md font-small">Password</label>
-              <a href="/forgotpassword" className="text-blue-700 text-sm font-medium">
+              <a href="/forgotpassword" className="text-violet-700 text-sm font-medium">
                 Forgot password?
               </a>
             </div>
@@ -146,7 +146,7 @@ function LoginForm() {
           <div className="flex mt-8 ml-1 gap-3 items-center">
             <input
               type="checkbox"
-              className="w-4 h-4 accent-blue-700"
+              className="w-4 h-4 accent-violet-700"
               checked={keepSignedIn}
               onChange={(e) => setKeepSignedIn(e.target.checked)}
             />
@@ -156,7 +156,7 @@ function LoginForm() {
           <button
             type="submit"
             className={`w-full mt-6 py-3 rounded-full text-white font-medium text-sm ${
-              isLoginDisabled ? "bg-gray-300 cursor-not-allowed" : "bg-blue-700"
+              isLoginDisabled ? "bg-gray-300 cursor-not-allowed" : "bg-violet-700"
             }`}
             disabled={isLoginDisabled}
           >
@@ -178,7 +178,7 @@ function LoginForm() {
           {/* Sign Up Link */}
           <h2
             onClick={() => navigate("/signup")}
-            className="text-center font-medium text-md text-blue-600 mt-8 cursor-pointer hover:text-blue-800"
+            className="text-center font-medium text-md text-violet-600 mt-8 cursor-pointer hover:text-violet-800"
           >
             Create an account
           </h2>

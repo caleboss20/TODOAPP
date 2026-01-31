@@ -17,10 +17,10 @@ function Notifications() {
       createdAt: Date.now(),
       isRead: false,
       icon: TruckIcon,
-      iconBg: "bg-blue-100",
-      iconColor: "text-blue-700",
-      cardBg: "bg-blue-50",
-      borderbg: "border-blue-200",
+      iconBg: "bg-violet-100",
+      iconColor: "text-violet-700",
+      cardBg: "bg-violet-50",
+      borderbg: "border-violet-200",
     },
     {
       id: 2,
@@ -34,18 +34,7 @@ function Notifications() {
       cardBg: "bg-yellow-50",
       borderbg: "border-yellow-200",
     },
-    {
-      id: 3,
-      title: "Service Started",
-      description: "Shuttle service has started for today",
-      createdAt: Date.now() - 60 * 60 * 1000,
-      isRead: false,
-      icon: CheckCircleIcon,
-      iconBg: "bg-green-100",
-      iconColor: "text-green-700",
-      cardBg: "bg-green-50",
-      borderbg: "border-green-200",
-    },
+    
   ]);
   // 🔁 force real-time update like Uber
   useEffect(() => {
@@ -87,7 +76,7 @@ function Notifications() {
         </div>
         <div className="flex items-center gap-3">
          
-          <div className="py-1 px-3 flex justify-center items-center font-medium text-white bg-blue-500 rounded-2xl">
+          <div className="py-1 px-3 flex justify-center items-center font-medium text-white bg-violet-500 rounded-2xl">
             <span>{unreadCount} new</span>
           </div>
         </div>
@@ -96,7 +85,7 @@ function Notifications() {
         {notification.length === 0 ? (
           <div className="w-full h-100 flex flex-col items-center justify-center gap-2">
             <BellIcon className="w-10 h-10 text-gray-500" />
-            <p className="text-gray-500 text-md">No notifications yet</p>
+            <p className="text-gray-500 text-md">No new notifications yet</p>
           </div>
         ) : (
           notification.map((item) => {

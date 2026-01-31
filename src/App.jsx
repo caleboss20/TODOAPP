@@ -10,6 +10,7 @@ import SignUp from "./Forms/SignUp";
 import { useState } from "react";
 import Notifications from "./Notifications";
 import MapSection from "./MapSection";
+import DeleteAccount from "./Components/DeleteAccount";
 
 
   function App() {
@@ -22,6 +23,7 @@ import MapSection from "./MapSection";
      <Route path="/settings" element={<Settings />}></Route>
       <Route path="/notifications" element={<Notifications />}></Route>
      <Route path="/userprofile" element={<UserProfile />}></Route>
+       <Route path="/deleteaccount" element={<DeleteAccount />}></Route>
       <Route path="/login" element={<LoginForm />}></Route>
       <Route path="/signup" element={<SignUp />}></Route>
    

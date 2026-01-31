@@ -3,6 +3,7 @@ import {
   ChevronRightIcon,
   LockClosedIcon,
   QuestionMarkCircleIcon,
+  TrashIcon,
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
 import { Link, useNavigate } from "react-router-dom";
@@ -116,7 +117,7 @@ function Settings() {
         <h2 className="text-2xl font-medium">Settings</h2>
         <div className="flex w-full mt-10 justify-between items-center">
           <div className="flex gap-2">
-            <div className="w-12 h-12 bg-blue-400 rounded-full overflow-hidden">
+            <div className="w-12 h-12 bg-violet-400 rounded-full overflow-hidden">
               {profileImage ? (
                 <img
                   src={profileImage}
@@ -182,13 +183,25 @@ function Settings() {
             <ToggleButton />
           </div>
         </div>
+
+        <Link to="/deleteaccount">
+          <div className="py-5 flex items-center justify-between border-b-[1px] border-t-[1px] border-gray-100">
+            <div className="flex gap-3 items-center">
+              <TrashIcon className="w-6 h-6 text-gray-700" />
+              <p className="text-black font-small text-md">Delete account</p>
+            </div>
+            <div>
+              <ChevronRightIcon className="w-12 h-4" />
+            </div>
+          </div>
+        </Link>
       </div>
       <div className="p-6 mb-20">
         <div className=" py-5 px-11 flex gap-3 flex-col justify-center items-center w-full rounded-2xl bg-gray-100">
           <span className="text-black text-sm text-center">
             If you have any other query you can reach out to us.
           </span>
-          <span className="underline text-blue-900 text-center text-sm">
+          <span className="underline text-violet-900 text-center text-sm">
             Whatsapp Us
           </span>
         </div>
@@ -267,8 +280,8 @@ function Settings() {
                   isSavePasswordDisabled
                     ? "bg-gray-200 cursor-not-allowed"
                     : isSavingPassword
-                    ? "bg-blue-700 opacity-30"
-                    : "bg-blue-700 "
+                    ? "bg-violet-700 opacity-30"
+                    : "bg-violet-700 "
                 }`}
                 disabled={isSavePasswordDisabled || isSavingPassword}
               >
@@ -315,7 +328,7 @@ function Settings() {
       {logoutOverlay && (
         <div className="fixed inset-0 bg-black/70  flex items-center justify-center z-50">
           <div className="flex flex-col items-center gap-4">
-            <div className="w-12 h-12 border-4 border-white border-t-blue-500 rounded-full animate-spin"></div>
+            <div className="w-12 h-12 border-4 border-white border-t-violet-500 rounded-full animate-spin"></div>
             <p className="text-white text-lg font-medium">Logging out...</p>
           </div>
         </div>

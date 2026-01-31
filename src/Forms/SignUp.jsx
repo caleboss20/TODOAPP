@@ -89,7 +89,7 @@ function SignUp() {
       {isSaving && (
         <div className="fixed inset-0 bg-black/40 bg-opacity-50 flex items-center justify-center z-50">
           <div className="flex flex-col items-center gap-4">
-            <div className="w-12 h-12 border-4 border-white border-t-blue-500 rounded-full animate-spin"></div>
+            <div className="w-12 h-12 border-4 border-white border-t-violet-500 rounded-full animate-spin"></div>
             <p className="text-white text-sm font-medium">Creating account...</p>
           </div>
         </div>
@@ -147,13 +147,13 @@ function SignUp() {
           </div>
           <div className="mt-5">
             <span className="text-[12px] text-gray-500">
-              By continuing you agree to our <span className="text-blue-700">terms of service.</span>
+              By continuing you agree to our <span className="text-violet-700">terms of service.</span>
             </span>
           </div>
           <button
             type="submit"
             className={`w-full mt-6 py-3 rounded-full text-white font-medium text-sm ${
-              isSignUpDisabled ? "bg-gray-300 cursor-not-allowed" : "bg-blue-700"
+              isSignUpDisabled ? "bg-gray-300 cursor-not-allowed" : "bg-violet-700"
             }`}
             disabled={isSignUpDisabled}
           >
@@ -172,7 +172,7 @@ function SignUp() {
           </button>
           <h2 className="text-center text-md text-gray-500 mt-8">
             Already have an account?
-            <a href="/login" className="text-blue-700 font-medium">
+            <a href="/login" className="text-violet-700 font-medium">
               {" "}
               Log in here
             </a>

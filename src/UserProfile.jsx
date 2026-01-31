@@ -123,7 +123,7 @@ function UserProfile() {
       {isSaving && (
         <div className="fixed inset-0 bg-black/50 bg-opacity-50 flex items-center justify-center z-50">
           <div className="flex flex-col items-center gap-4">
-            <div className="w-12 h-12 border-4 border-white border-t-blue-500 rounded-full animate-spin"></div>
+            <div className="w-12 h-12 border-4 border-white border-t-violet-500 rounded-full animate-spin"></div>
             <p className="text-white text-lg font-medium">Saving profile...</p>
           </div>
         </div>
@@ -215,7 +215,7 @@ function UserProfile() {
             <button
               type="submit"
               className={`mt-5 py-3 rounded-full text-white font-medium text-lg ${
-                isSaveDisabled ? "bg-gray-300 cursor-not-allowed" : "bg-blue-700"
+                isSaveDisabled ? "bg-gray-300 cursor-not-allowed" : "bg-violet-700"
               }`}
               disabled={isSaveDisabled}
             >

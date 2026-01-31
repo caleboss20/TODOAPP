@@ -31,6 +31,7 @@ function BottomNavbar() {
   return (
     <div className="pl-4 pr-4 flex items-center justify-between w-full h-20 bg-white fixed bottom-0 left-0 right-0">
       {/* HOME */}
+      <Link to="/mainpage">
       <div
         onClick={() => handleActive("home")}
         className="shadow- p-2 rounded-full"
@@ -38,8 +39,8 @@ function BottomNavbar() {
         {active === "home" ? (
           <>
             <div className="flex flex-col items-center justify-center">
-              <HomeSolid className="text-blue-500 w-6 h-6" />
-              <span className="font-small text-[12px] text-blue-600">Home</span>
+              <HomeSolid className="text-violet-500 w-6 h-6" />
+              <span className="font-small text-[12px] text-violet-600">Home</span>
             </div>
           </>
         ) : (
@@ -51,6 +52,7 @@ function BottomNavbar() {
           </>
         )}
       </div>
+      </Link>
       {/* MAP */}
       <Link to="/mapsection">
       <div
@@ -60,8 +62,8 @@ function BottomNavbar() {
         {active === "map" ? (
           <>
             <div className="flex flex-col items-center justify-center">
-              <MapPinSolid className="text-blue-500 w-6 h-6" />
-              <span className="font-small text-[12px] text-blue-600">Map</span>
+              <MapPinSolid className="text-violet-500 w-6 h-6" />
+              <span className="font-small text-[12px] text-violet-600">Map</span>
             </div>
           </>
           
@@ -85,8 +87,8 @@ function BottomNavbar() {
         {active === "notifications" ? (
            <>
             <div className="flex flex-col items-center justify-center">
-            <BellIconSolid className="text-blue-500 w-6 h-6" />
-              <span className="font-small text-[12px] text-blue-600">Alerts</span>
+            <BellIconSolid className="text-violet-500 w-6 h-6" />
+              <span className="font-small text-[12px] text-violet-600">Alerts</span>
             </div>
           </>
           
@@ -110,8 +112,8 @@ function BottomNavbar() {
           {active === "profile" ? (
              <>
             <div className="flex flex-col items-center justify-center">
-            <Cog6ToothIconSolid className="text-blue-500 w-6 h-6" />
-              <span className="font-small text-[12px] text-blue-600">Settings</span>
+            <Cog6ToothIconSolid className="text-violet-500 w-6 h-6" />
+              <span className="font-small text-[12px] text-violet-600">Settings</span>
             </div>
           </>
             
