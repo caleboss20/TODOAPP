@@ -11,6 +11,7 @@ import { useState } from "react";
 import Notifications from "./Notifications";
 import MapSection from "./MapSection";
 import DeleteAccount from "./Components/DeleteAccount";
+import FaqSection from "./FaqSection";
 
 
   function App() {
@@ -21,6 +22,7 @@ import DeleteAccount from "./Components/DeleteAccount";
      <Route path="/mainpage" element={<MainPage  />}></Route>
      <Route path="/mapsection" element={<MapSection/>}></Route>
      <Route path="/settings" element={<Settings />}></Route>
+          <Route path="/faqsection" element={<FaqSection />}></Route>
       <Route path="/notifications" element={<Notifications />}></Route>
      <Route path="/userprofile" element={<UserProfile />}></Route>
        <Route path="/deleteaccount" element={<DeleteAccount />}></Route>

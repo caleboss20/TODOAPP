@@ -165,7 +165,9 @@ function Settings() {
             <ChevronRightIcon className="w-12 h-4" />
           </div>
         </div>
-        <div className="py-5 flex items-center justify-between border-b-[1px] border-t-[1px] border-gray-100">
+        <div
+        onClick={()=>navigate("/faqsection")} 
+        className="py-5 flex items-center justify-between border-b-[1px] border-t-[1px] border-gray-100">
           <div className="flex gap-3 items-center">
             <QuestionMarkCircleIcon className="w-6 h-6 text-gray-700" />
             <p className="text-black font-small text-md">FAQs</p>
