@@ -1,0 +1,52 @@
+'Log files:
+C:\Users\Caleb\OneDrive\Desktop\BIG BOX FOLDER\REACT\NewProject\clean\_logs\2026-04-10T08_33_31_093Z-debug-0.log
+
+# npm resolution error report
+
+While resolving: react-leaflet@5.0.0
+Found: react@18.3.1
+node_modules/react
+  react@"^18.2.0" from the root project
+  peer react@">= 16 || ^19.0.0-rc" from @heroicons/react@2.2.0
+  node_modules/@heroicons/react
+    @heroicons/react@"^2.2.0" from the root project
+  peer react@"^16.8 || ^17 || ^18 || ^19" from @react-google-maps/api@2.20.8
+  node_modules/@react-google-maps/api
+    @react-google-maps/api@"^2.20.8" from the root project
+  peer react@"^18.3.1" from react-dom@18.3.1
+  node_modules/react-dom
+    react-dom@"^18.2.0" from the root project
+    peer react-dom@"^16.8 || ^17 || ^18 || ^19" from @react-google-maps/api@2.20.8
+    node_modules/@react-google-maps/api
+      @react-google-maps/api@"^2.20.8" from the root project
+    peerOptional react-dom@">=18" from react-router@7.13.0
+    node_modules/react-router
+      react-router@"7.13.0" from react-router-dom@7.13.0
+      node_modules/react-router-dom
+        react-router-dom@"^7.9.6" from the root project
+    peer react-dom@">=18" from react-router-dom@7.13.0
+    node_modules/react-router-dom
+      react-router-dom@"^7.9.6" from the root project
+  peer react@">=18" from react-router@7.13.0
+  node_modules/react-router
+    react-router@"7.13.0" from react-router-dom@7.13.0
+    node_modules/react-router-dom
+      react-router-dom@"^7.9.6" from the root project
+  peer react@">=18" from react-router-dom@7.13.0
+  node_modules/react-router-dom
+    react-router-dom@"^7.9.6" from the root project
+
+Could not resolve dependency:
+peer react@"^19.0.0" from react-leaflet@5.0.0
+node_modules/react-leaflet
+  react-leaflet@"^5.0.0" from the root project
+
+Conflicting peer dependency: react@19.2.5
+node_modules/react
+  peer react@"^19.0.0" from react-leaflet@5.0.0
+  node_modules/react-leaflet
+    react-leaflet@"^5.0.0" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.
