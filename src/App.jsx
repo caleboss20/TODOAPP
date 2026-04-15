@@ -4,13 +4,14 @@ import { useState, useEffect } from "react";
 import Delivery from "./Delivery";
 import DeliveryMainpage from "./DeliveryMainpage";
 import CartPage from "./CartPage";
-import DeliveryBottomNavbar from "./DeliveryBottomNavbar";
 import Checkout from "./Checkout";
 import DeliveryNavbar from "./DeliveryNavbar";
 import SearchPage from "./SearchPage";
 import Profile from "./Profile";
 import FormPage from "./FormPage";
-import Splashscreen from "./Splashscreen";
+import Splashpage from "./Splashpage";
+
+
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   // 🛒 CART STATE (LOAD FROM LOCAL STORAGE)
@@ -96,7 +97,7 @@ function App() {
     <>
       <Routes>
         {/* 🏠 Splash */}
-        <Route path="/" element={<Splashscreen />} />
+        <Route path="/" element={<Splashpage />} />
         {/* 🚀 Entry */}
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/formpage" element={<FormPage />} />
