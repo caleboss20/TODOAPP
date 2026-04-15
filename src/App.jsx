@@ -9,9 +9,7 @@ import DeliveryNavbar from "./DeliveryNavbar";
 import SearchPage from "./SearchPage";
 import Profile from "./Profile";
 import FormPage from "./FormPage";
-import Splashpage from "./Splashpage";
-
-
+import Splashscreen from "./Splashscreen";
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   // 🛒 CART STATE (LOAD FROM LOCAL STORAGE)
