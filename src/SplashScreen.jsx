@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import logo from "./assets/logo.png";
 
 import { Link, useNavigate } from "react-router-dom";
-function Splashscreen() {
+function SplashScreen() {
     const navigate=useNavigate();
     useEffect(()=>{
      const timer=setTimeout(()=>{
@@ -22,4 +22,4 @@ function Splashscreen() {
     </div>
   );
 }
-export default Splashscreen;
+export default SplashScreen;
