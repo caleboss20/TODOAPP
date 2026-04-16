@@ -20,7 +20,7 @@ export default function FormPage() {
   return (
     <div
       className="min-h-screen 
-    bg-white flex flex-col fixed"
+    bg-white flex flex-col"
     >
       {/* YOUR HERO IMAGE HERE */}
       <div className="w-full flex justify-center">
