@@ -11,6 +11,8 @@ import Profile from "./Profile";
 import FormPage from "./FormPage";
 import Splashpage from "./Splashpage";
 
+
+
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   // 🛒 CART STATE (LOAD FROM LOCAL STORAGE)
