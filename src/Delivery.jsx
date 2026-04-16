@@ -15,7 +15,7 @@ function Delivery() {
   };
   
   return (
-    <div className="w-full h-screen flex items-center justify-center ">
+    <div className="w-full h-screen fixed flex items-center justify-center ">
       <div className="relative w-full h-full overflow-hidden ">
         <img src={delivery} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/20 z-20">
