@@ -9,6 +9,7 @@ import {
   Cog6ToothIcon,
 } from "@heroicons/react/24/solid";
 import profile from "./assets/profile.jpg";
+import { useNavigate } from "react-router-dom";
 const menuItems = [
   { id: 1, label: "Profile", icon: UserIcon },
   { id: 2, label: "Cart", icon: ShoppingCartIcon },
@@ -19,6 +20,7 @@ const menuItems = [
   { id: 7, label: "Settings", icon: Cog6ToothIcon },
 ];
 function Sidebar({ open, onClose }) {
+  const navigate=useNavigate();
   return (
     <>
       {/* OVERLAY */}
@@ -31,7 +33,7 @@ function Sidebar({ open, onClose }) {
       />
       {/* SIDEBAR */}
       <div
-        className={`fixed top-0 left-0 h-full 
+        className={`fixed top-0 bottom-0 left-0 h-full
          w-[78%] bg-yellow-500 z-50
           rounded-r-3xl
           transition-transform duration-300
@@ -70,7 +72,9 @@ function Sidebar({ open, onClose }) {
         </div>
         {/* LOGOUT */}
         <div className="px-7 pb-10">
-          <button className="flex items-center gap-3 text-white text-base font-medium">
+          <button
+          onClick={()=>navigate("/formpage")}
+           className="flex items-center gap-3 text-white text-base font-medium">
             Logout
             <ArrowRightOnRectangleIcon className="w-5 h-5 text-white" />
           </button>

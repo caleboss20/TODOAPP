@@ -29,7 +29,7 @@ function DeliveryNavbar() {
           </div>
         </div>
         <div className="flex gap-5">
-          <BellIcon className="w-7 h-7 color-black mr-3" />
+          <BellIcon className="w-6 h-6 color-black mr-3" />
         </div>
       </div>
     </>

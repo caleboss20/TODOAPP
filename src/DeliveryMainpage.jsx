@@ -160,7 +160,7 @@ function DeliveryMainpage({ onProfileClick,cart, addToCart, buttonState, cartCou
             <input
               onClick={() => navigate("/searchpage")}
               placeholder='Search "Caleboss yoghurt" '
-              className="text-lg w-full text-gray-700 border-none outline-none flex-1"
+              className="text-md w-full text-gray-700 border-none outline-none flex-1"
               readOnly
             />
             <div className="p-2 bg-yellow-500 rounded-full text-white">
@@ -171,7 +171,9 @@ function DeliveryMainpage({ onProfileClick,cart, addToCart, buttonState, cartCou
         <div className="bg-white w-full p-4 rounded-2xl">
           {/* Banner */}
           <div
-            className={`flex w-full pl-4 pt-6 pb-6 rounded-2xl overflow-hidden ${banner.bg}`}
+            className={`flex w-full pl-4
+               pt-6 pb-6 rounded-2xl 
+               overflow-hidden ${banner.bg}`}
             style={{ transition: "background-color 0.5s ease" }}
           >
             <div key={`text-${currentBanner}`} className="flex flex-col gap-3 banner-animate">
@@ -234,10 +236,10 @@ function DeliveryMainpage({ onProfileClick,cart, addToCart, buttonState, cartCou
                       <span className="text-gray-800 text-md">{item.star}</span>
                     </div>
                   </div>
-                  <div className="w-full flex mt-3 justify-between p-2">
+                  <div className="w-full flex mt-3 justify-between p-6">
                     <span className="font-bold text-xl text-gray-800">{item.price}</span>
-                    <div className="absolute bottom-0 right-0 bg-yellow-500 rounded-tl-3xl rounded-br-2xl w-10 h-10 flex items-center justify-center">
-                      <PlusIcon className="w-6 h-6 text-white" />
+                    <div className="absolute bottom-0 right-0 bg-yellow-500 rounded-tl-3xl rounded-br-2xl w-8 h-8 flex items-center justify-center">
+                      <PlusIcon className="w-5 h-5 text-white" />
                     </div>
                   </div>
                 </div>

@@ -1,18 +1,37 @@
-import { ChevronLeftIcon, XMarkIcon, TagIcon } from "@heroicons/react/24/outline";
+import {
+  ChevronLeftIcon,
+  XMarkIcon,
+  TagIcon,
+} from "@heroicons/react/24/outline";
 import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import DeliveryBottomNavbar from "./DeliveryBottomNavbar";
-export default function CartPage({ cart, addToCart, removeFromCart, cartCount, setCheckoutData }) {
+export default function CartPage({
+  cart,
+  addToCart,
+  removeFromCart,
+  cartCount,
+  setCheckoutData,
+}) {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
   const [promoCode, setPromoCode] = useState("");
   const [discount, setDiscount] = useState(0);
   const [promoMsg, setPromoMsg] = useState("");
-  const parsePrice = (priceStr) =>
-    parseFloat(priceStr.replace("GH₵", ""));
+
+  const handleClick = () => {
+    setLoading(true);
+    setCheckoutData({ subtotal, deliveryFee, discount, total });
+    setTimeout(() => {
+      navigate("/checkout");
+    }, 3000);
+  };
+
+  const parsePrice = (priceStr) => parseFloat(priceStr.replace("GH₵", ""));
   const subtotal = cart.reduce(
     (sum, item) => sum + parsePrice(item.price) * item.quantity,
-    0
+    0,
   );
   const deliveryFee = cart.length > 0 ? 5.0 : 0;
   const total = subtotal + deliveryFee - discount;
@@ -72,25 +91,37 @@ export default function CartPage({ cart, addToCart, removeFromCart, cartCount, s
                   className="justify-between gap-1 flex w-full py-2 rounded-2xl"
                 >
                   <div>
-                    <img className="w-28 h-28" src={item.image} alt={item.name} />
+                    <img
+                      className="w-28 h-28"
+                      src={item.image}
+                      alt={item.name}
+                    />
                   </div>
                   <div className="flex flex-col gap-2 justify-center flex-1">
                     <h2 className="font-bold text-md">{item.name}</h2>
-                    <span className="text-sm text-gray-800">{item.tagname}</span>
+                    <span className="text-sm text-gray-800">
+                      {item.tagname}
+                    </span>
                     <h2 className="font-bold text-gray-800 text-md">
                       GH₵{(parsePrice(item.price) * item.quantity).toFixed(2)}
                     </h2>
                   </div>
                   <div className="w-1 py-3 px-3 justify-center flex justify-end items-end gap-2">
                     <button
-                      onClick={(e) => { e.stopPropagation(); removeFromCart(item.id); }}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        removeFromCart(item.id);
+                      }}
                       className="py-0 px-2 bg-yellow-500 rounded-md text-white font-bold"
                     >
                       -
                     </button>
                     <span className="font-medium">{item.quantity}</span>
                     <button
-                      onClick={(e) => { e.stopPropagation(); addToCart(item, 1); }}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        addToCart(item, 1);
+                      }}
                       className="py-0 px-2 bg-yellow-500 rounded-md text-white font-bold"
                     >
                       +
@@ -136,7 +167,9 @@ export default function CartPage({ cart, addToCart, removeFromCart, cartCount, s
                 )}
                 <div className="border-t border-gray-200 pt-2 flex justify-between font-bold text-gray-900 text-base">
                   <span>Total</span>
-                  <span className="text-xl text-yellow-600">GH₵{total.toFixed(2)}</span>
+                  <span className="text-xl text-yellow-600">
+                    GH₵{total.toFixed(2)}
+                  </span>
                 </div>
               </div>
             </>
@@ -146,16 +179,20 @@ export default function CartPage({ cart, addToCart, removeFromCart, cartCount, s
         {cart.length > 0 && (
           <div className="fixed bottom-0 left-0 right-0 bg-white px-4 pt-3 pb-6">
             <button
-              onClick={() => {
-                setCheckoutData({ subtotal, deliveryFee, discount, total });
-                navigate("/checkout");
-              }}
-              className="border-none outline-none
+              onClick={handleClick}
+              className=" flex gap-3 justify-center border-none outline-none
                w-full py-3 rounded-4xl
                 bg-yellow-500 text-white
                  font-medium"
             >
               Checkout - GH₵{total.toFixed(2)}
+              <span>
+                {loading ? (
+                  <div className="mt-1 w-4 h-4 rounded-full border-2 border-white border-t-transparent animate-spin" />
+                ) : (
+                  ""
+                )}
+              </span>
             </button>
           </div>
         )}

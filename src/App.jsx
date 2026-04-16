@@ -9,7 +9,8 @@ import DeliveryNavbar from "./DeliveryNavbar";
 import SearchPage from "./SearchPage";
 import Profile from "./Profile";
 import FormPage from "./FormPage";
-import Splashscreen from "./Splashscreen";
+import Splashpage from "./Splashpage";
+
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   // 🛒 CART STATE (LOAD FROM LOCAL STORAGE)
@@ -146,6 +147,7 @@ function App() {
         <Route
           path="/checkout"
           element={<Checkout 
+            setCart={setCart}
             checkoutData={checkoutData} />}
         />
       </Routes>

@@ -1,4 +1,6 @@
 import food from "./assets/drink.jpg";
+import delivery from "./assets/delivery.png";
+import yogo from "./assets/calyogo.png";
 import { useNavigate } from "react-router-dom";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
@@ -11,11 +13,12 @@ function Delivery() {
       navigate("/formpage");
     }, 3000);
   };
+  
   return (
     <div className="w-full h-screen flex items-center justify-center ">
       <div className="relative w-full h-full overflow-hidden ">
-        <img src={food} className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10 z-20">
+        <img src={delivery} className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/20 z-20">
           <div className="bottom-0 left-0 right-0 inset-0 bg-black/2 z-20">
             <div className="fixed bottom-5 mt-5 flex flex-col p-6 gap-6 items-center justify-center">
               <h2 className="font-medium text-2xl text-center text-gray-200">
