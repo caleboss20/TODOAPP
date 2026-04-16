@@ -12,7 +12,7 @@ function Splashpage() {
     },[navigate]);
     
   return (
-    <div className="z-60 w-full h-screen bg-yellow-00 items-center justify-center flex">
+    <div className="z-60 w-full h-screen fixed left-0 right-0 bg-yellow-00 items-center justify-center flex">
       <div className="flex flex-col gap-5 items-center">
        <img src={logo} className="w-60 h-60" alt="" /> 
            {/* <h2 className="text-4xl font-bold text-gray-800">Caleboss</h2>
